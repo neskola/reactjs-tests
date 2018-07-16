@@ -48,13 +48,7 @@ const User = ({ user }) => {
     );
 }
 
-class Board extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: null,
-        }
-    }
+class ScoreTable extends React.Component {
 
     render() {
         const users = renderUsers(jsondata);
@@ -77,13 +71,7 @@ class ScoreBoard extends React.Component {
     render() {
         return (
             <div className="scores">
-                <div className="game-board">
-                    <Board />
-                </div>
-                <div className="game-info">
-                    <div>{/* status */}</div>
-                    <ol>{/* TODO */}</ol>
-                </div>
+                <ScoreTable />
             </div>
         );
     }
